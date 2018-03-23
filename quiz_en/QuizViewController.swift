@@ -17,20 +17,27 @@ class QuizViewController: UIViewController {
   @IBOutlet weak var coiceButton2: UIButton!
   @IBOutlet weak var coiceButton3: UIButton!
   @IBOutlet weak var coiceButton4: UIButton!
+  @IBOutlet weak var incollectLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    navigationItem.hidesBackButton = true
     
     questionLabel.text = quiz["quiz"]
     coiceButton1.setTitle(quiz["choice_1"], for: .normal)
     coiceButton2.setTitle(quiz["choice_2"], for: .normal)
     coiceButton3.setTitle(quiz["choice_3"], for: .normal)
     coiceButton4.setTitle(quiz["choice_4"], for: .normal)
+    incollectLabel.isHidden = true
   }
   
   @IBAction func tappedAnswer(_ sender: UIButton) {
     
-    if quiz["answer"] != sender.titleLabel?.text { return }
+    if quiz["answer"] != sender.titleLabel?.text {
+      incollectLabel.isHidden = false
+      return
+    }
     
     let isExist = QuizManager.shared.isExistNextQuiz()
     let next = isExist ?

@@ -114,6 +114,13 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrong answer!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSh-ln-Vv3">
+                                <rect key="frame" x="130" y="201" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="baA-nl-R0a"/>
@@ -123,6 +130,7 @@
                         <outlet property="coiceButton2" destination="7dv-oA-18j" id="S2Q-Fl-BCC"/>
                         <outlet property="coiceButton3" destination="tGE-7z-KXL" id="hMs-t9-Ldu"/>
                         <outlet property="coiceButton4" destination="LqS-wN-pnt" id="TR1-Ga-Kq8"/>
+                        <outlet property="incollectLabel" destination="DSh-ln-Vv3" id="zdG-qf-NGW"/>
                         <outlet property="questionLabel" destination="SiC-lg-E9v" id="sHw-hq-qvB"/>
                     </connections>
                 </viewController>
@@ -150,7 +158,7 @@
                                     <action selector="tappedGoBack:" destination="vRc-BQ-meb" eventType="touchUpInside" id="CxO-I7-Sh6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-EQ-9GP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congrads!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-EQ-9GP">
                                 <rect key="frame" x="24" y="117" width="327" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>

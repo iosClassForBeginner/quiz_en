@@ -19,28 +19,28 @@ class QuizManager: NSObject {
   private func initQuiz() {
     quizes = [
       [
-        "quiz": "quiz 1",
-        "answer": "choice 1-1",
-        "choice_1": "choice 1-1",
-        "choice_2": "choice 1-2",
-        "choice_3": "choice 1-3",
-        "choice_4": "choice 1-4"
+        "quiz": "1 + 1 = ?",
+        "answer": "2",
+        "choice_1": "100",
+        "choice_2": "2",
+        "choice_3": "5",
+        "choice_4": "67"
       ],
       [
-        "quiz": "quiz 2",
-        "answer": "choice 2-2",
-        "choice_1": "choice 2-1",
-        "choice_2": "choice 2-2",
-        "choice_3": "choice 2-3",
-        "choice_4": "choice 2-4"
+        "quiz": "2 + 3 = ?",
+        "answer": "5",
+        "choice_1": "5",
+        "choice_2": "10",
+        "choice_3": "9",
+        "choice_4": "23"
       ],
       [
-        "quiz": "quiz 3",
-        "answer": "choice 3-3",
-        "choice_1": "choice 3-1",
-        "choice_2": "choice 3-2",
-        "choice_3": "choice 3-3",
-        "choice_4": "choice 3-4"
+        "quiz": "100 x 0 = ?",
+        "answer": "0",
+        "choice_1": "100",
+        "choice_2": "10",
+        "choice_3": "1000",
+        "choice_4": "0"
       ],
     ]
   }

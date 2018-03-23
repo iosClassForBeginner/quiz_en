@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    navigationItem.hidesBackButton = true
   }
   
   @IBAction func tappedGoBack(_ sender: Any) {
