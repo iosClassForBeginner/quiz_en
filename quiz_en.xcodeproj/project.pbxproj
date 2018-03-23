@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04891F2D2064B40800E28B33 /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04891F2C2064B40800E28B33 /* QuizManager.swift */; };
 		04CEC2E12063560400AA3839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEC2E02063560400AA3839 /* AppDelegate.swift */; };
 		04CEC2E32063560400AA3839 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CEC2E22063560400AA3839 /* HomeViewController.swift */; };
 		04CEC2E62063560400AA3839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CEC2E42063560400AA3839 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04891F2C2064B40800E28B33 /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		04CEC2DD2063560400AA3839 /* quiz_en.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz_en.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CEC2E02063560400AA3839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CEC2E22063560400AA3839 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				04CEC2E22063560400AA3839 /* HomeViewController.swift */,
 				04CEC2F22063568100AA3839 /* QuizViewController.swift */,
 				04CEC2F6206356B100AA3839 /* ResultViewController.swift */,
+				04891F2C2064B40800E28B33 /* QuizManager.swift */,
 				04CEC2E42063560400AA3839 /* Main.storyboard */,
 				04CEC2E72063560400AA3839 /* Assets.xcassets */,
 				04CEC2E92063560400AA3839 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CEC2F42063568100AA3839 /* QuizViewController.swift in Sources */,
+				04891F2D2064B40800E28B33 /* QuizManager.swift in Sources */,
 				04CEC2E32063560400AA3839 /* HomeViewController.swift in Sources */,
 				04CEC2E12063560400AA3839 /* AppDelegate.swift in Sources */,
 				04CEC2F7206356B100AA3839 /* ResultViewController.swift in Sources */,

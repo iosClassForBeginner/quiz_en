@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  
   @IBAction func tappedGoBack(_ sender: Any) {
+    navigationController?.popToRootViewController(animated: true)
   }
 }
