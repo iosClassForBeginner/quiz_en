@@ -22,6 +22,7 @@ class QuizViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    incollectLabel.isHidden = true
     navigationItem.hidesBackButton = true
     
     questionLabel.text = quiz["quiz"]
@@ -29,7 +30,6 @@ class QuizViewController: UIViewController {
     coiceButton2.setTitle(quiz["choice_2"], for: .normal)
     coiceButton3.setTitle(quiz["choice_3"], for: .normal)
     coiceButton4.setTitle(quiz["choice_4"], for: .normal)
-    incollectLabel.isHidden = true
   }
   
   @IBAction func tappedAnswer(_ sender: UIButton) {
@@ -39,8 +39,8 @@ class QuizViewController: UIViewController {
       return
     }
     
-    let isExist = QuizManager.shared.isExistNextQuiz()
-    let next = isExist ?
+    let isExisting = QuizManager.shared.existNextQuiz()
+    let next = isExisting ?
       storyboard!.instantiateViewController(withIdentifier: "QuizViewController") :
       storyboard!.instantiateViewController(withIdentifier: "ResultViewController")
     navigationController?.pushViewController(next, animated: true)

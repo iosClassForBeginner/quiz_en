@@ -14,44 +14,42 @@ class QuizManager: NSObject {
   private override init() {} // Singleton
 
   private var quizes = [[String: String]]()
-  private var result = [Bool]()
   
-  private func initQuiz() {
+  private func setupQuizzes() {
     quizes = [
       [
-        "quiz": "1 + 1 = ?",
-        "answer": "2",
-        "choice_1": "100",
-        "choice_2": "2",
-        "choice_3": "5",
-        "choice_4": "67"
+        "quiz": "1. What colour ball should normally be struck by the cue in snooker?",
+        "answer": "white",
+        "choice_1": "white",
+        "choice_2": "mauve",
+        "choice_3": "black",
+        "choice_4": "orange"
       ],
       [
-        "quiz": "2 + 3 = ?",
-        "answer": "5",
-        "choice_1": "5",
-        "choice_2": "10",
-        "choice_3": "9",
-        "choice_4": "23"
+        "quiz": "2. Which word means a signed document in support of a particular action?",
+        "answer": "partition",
+        "choice_1": "petition",
+        "choice_2": "position",
+        "choice_3": "partition",
+        "choice_4": "perforation"
       ],
       [
-        "quiz": "100 x 0 = ?",
-        "answer": "0",
-        "choice_1": "100",
-        "choice_2": "10",
-        "choice_3": "1000",
-        "choice_4": "0"
+        "quiz": "3. Somebody described as 'butterfingers' would have a propensity for what?",
+        "answer": "being clumsy",
+        "choice_1": "being clumsy",
+        "choice_2": "playing the piano",
+        "choice_3": "gardening",
+        "choice_4": "cookery"
       ],
     ]
   }
   
-  func isExistNextQuiz() -> Bool {
-    let isExisting = quizes.count != 0
-    return isExisting
+  func existNextQuiz() -> Bool {
+    return quizes.count != 0
   }
   
   func getQuiz() -> [String: String] {
-    if quizes.count == 0 { initQuiz() }
+    if quizes.count == 0 { setupQuizzes() }
     let quiz = quizes.first
     quizes.removeFirst()
     return quiz!
