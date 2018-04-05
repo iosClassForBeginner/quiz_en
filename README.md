@@ -24,7 +24,7 @@ You complete project setup. Good job! Now we can work on front side. Please sele
 
 * 3-2. Let's add image view  
   * Select `UIImageView` component from the utility area. Drag & drop to the board.  
-  * <details><summary>How to add image view</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/{asset-name.gif}" /></div></details>
+  * <details><summary>How to add image view</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/image-add.gif" /></div></details>
 
 * 3-3. Resize it  
   * You can tap the edge of the `UIImageView` so that you can resize it. Or you can sepcify the size in the utility area.  
@@ -37,8 +37,13 @@ You complete project setup. Good job! Now we can work on front side. Please sele
 * 3-5. You can add `UIButton` exactory same with image view
   * <details><summary>How to add button</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-add.gif" /></div></details>
   * <details><summary>Resize it</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-resize.gif" /></div></details>
-  * <details><summary>Update properties</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-props-update.png" /></div></details>
   * <details><summary>Set autoresizing</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-autoresize.gif" /></div></details>
+
+* 3-6. Add `UIViewController`
+  * We need to 2 more screens which are showing `Quiz` and `Result`.
+  * Select `UIViewController` component from utility area.
+  * Drag & drop to the board
+  * <details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
 
 ## 4, Create Segue
  
