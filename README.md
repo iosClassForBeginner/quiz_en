@@ -46,6 +46,10 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * Drag & drop to the board
   * <details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
 
+* 3-7. Design quiz & result Screens  
+  * Youe storyboard may looks like this? Great!
+<div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
+
 ## 4, Create Segue
  
  ★  control + drag in storyboard to create a control segue
