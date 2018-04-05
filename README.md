@@ -19,7 +19,8 @@ We need 2 icons. Please download [watch](https://github.com/iosClassForBeginner/
 You complete project setup. Good job! Now we can work on front side. Please select `Main.storyboard`. This file help us  design the app a lot. Let's work on this.
 
 * 3-1. Let's add Navigation  
-  * Editor->Embed In->Navigation Controller
+  * We need a navigation for the screen transitions  
+  * To add navigation, `Editor->Embed In->Navigation Controller` so that you can add navigation to the root
   * <details><summary>How to add navigation</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/navigation.gif" /></div></details>
 
 * 3-2. Let's add image view  
