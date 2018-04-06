@@ -50,7 +50,21 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * Youe storyboard may looks like this? Great!
 <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
 
-## 4, Create Segue
+## 4, Add class
+ 
+* 4-1. Add `UIViewController` class
+  * We added 2 screens. We need 2 `UIVewController` classes collesponding the screens
+  * Add new class from menu or `command + N`
+  * One is `QuizViewController` subclass of `UIViewController`, Another is `ResultViewController`.
+  * <details><summary>How to add UIViewController class</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-add-viewcontroller.gif" /></div></details>
+ 
+ * 4-2. Connect `UIViewController` class to the storyboard  
+  * We need to connect the UIViewController classes to those in the storyboard
+  * Go to `main.storyboard`
+  * Add `class name` and `storyboard ID`. `QuiziViewController` and `ResultViewController` both
+  * <details><summary>How to connect UIViewController class to the storyboard</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-storyboard.gif" /></div></details>
+ 
+## 5, Create segue
  
  ★  control + drag in storyboard to create a control segue
 > <details><summary>{your-comment}</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/{asset-name.gif}" /></div></details>
