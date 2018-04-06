@@ -31,11 +31,11 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * You can tap the edge of the `UIImageView` so that you can resize it. Or you can sepcify the size in the utility area.  
   * <details><summary>How to resize the image view</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/image-resize.gif" /></div></details>
 
-* 3-4. Set Autoresizing for adjusting all device size
+* 3-4. Set Autoresizing
   * We need to adjust to all device size from iPhone to iPad. Easiest way is setting autoresizing.  
   * <details><summary>How to set autoresizing</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/image-autoresize.gif" /></div></details>
 
-* 3-5. You can add `UIButton` exactory same with image view
+* 3-5. Add `UIButton` exactory same way adding image view
   * <details><summary>How to add button</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-add.gif" /></div></details>
   * <details><summary>Resize it</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-resize.gif" /></div></details>
   * <details><summary>Set autoresizing</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/button-autoresize.gif" /></div></details>
@@ -44,30 +44,31 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * We need to 2 more screens which are showing `Quiz` and `Result`.
   * Select `UIViewController` component from utility area.
   * Drag & drop to the board
-  * <details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
+<details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
 
 * 3-7. Design quiz & result Screens  
   * Youe storyboard may looks like this? Great!
 <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
 
-## 4, Add class
+## 4, Connect class to storyboard
  
-* 4-1. Add `UIViewController` class
-  * We added 2 screens. We need 2 `UIVewController` classes collesponding the screens
+* 4-1. Add `UIViewController` class  
+  * We added 2 screens. We need 2 `UIVewController` classes collesponding the screens
   * Add new class from menu or `command + N`
   * One is `QuizViewController` subclass of `UIViewController`, Another is `ResultViewController`.
   * <details><summary>How to add UIViewController class</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-add-viewcontroller.gif" /></div></details>
  
- * 4-2. Connect `UIViewController` class to the storyboard  
-  * We need to connect the UIViewController classes to those in the storyboard
+* 4-2. Connect `UIViewController` class to the storyboard  
+  * We need to connect the UIViewController classes to the storyboard
   * Go to `main.storyboard`
   * Add `class name` and `storyboard ID`. `QuiziViewController` and `ResultViewController` both
   * <details><summary>How to connect UIViewController class to the storyboard</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-storyboard.gif" /></div></details>
  
-## 5, Create segue
- 
- ★  control + drag in storyboard to create a control segue
-> <details><summary>{your-comment}</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/{asset-name.gif}" /></div></details>
+* 4-3. Create segue
+  * We need to connect UI components to the class. i.e. Button action should be triguered after tapped
+  * To connect components to class, let's create segue.
+  * `control + drag in storyboard` to create a control segue
+> <details><summary>How to create segue</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-button-action.gif" /></div></details>
 
 ## 5, Add logic
 
