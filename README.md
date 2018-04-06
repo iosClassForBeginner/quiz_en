@@ -51,7 +51,7 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
 
 ## 4, Connect class to storyboard
- 
+
 * 4-1. Add `UIViewController` class  
   * We added 2 screens. We need 2 `UIVewController` classes collesponding the screens
   * Add new class from menu or `command + N`
@@ -60,20 +60,152 @@ You complete project setup. Good job! Now we can work on front side. Please sele
  
 * 4-2. Connect `UIViewController` class to the storyboard  
   * We need to connect the UIViewController classes to the storyboard
-  * Go to `main.storyboard`
   * Add `class name` and `storyboard ID`. `QuiziViewController` and `ResultViewController` both
+  * Go to `main.storyboard`
   * <details><summary>How to connect UIViewController class to the storyboard</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-storyboard.gif" /></div></details>
  
 * 4-3. Create segue
   * We need to connect UI components to the class. i.e. Button action should be triguered after tapped
   * To connect components to class, let's create segue.
-  * `control + drag in storyboard` to create a control segue
+  * `control + drag in storyboard` to create a segue
+  * We can see 2 type of segue. `Outlet` and `Action`
+  * `Outlet` is the component itself.
+  * `Action` is action trigger
   * <details><summary>How to create segue</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-button-action.gif" /></div></details>
 
 ## 5, Add logic
 
-★ It's preferable to write following code yourself. It will help you to understand code more.
+You complete the UI. Great job! Last section is coding part for adding logic. 
 
-```Swift  
+* UIViewContoller
 
+```Swift
+import UIKit
+
+class HomeViewController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  @IBAction func tappedStart(_ sender: Any) {
+    let next = storyboard!.instantiateViewController(withIdentifier: "QuizViewController")
+    navigationController?.pushViewController(next, animated: true)
+  }
+}
+```
+
+* QuizViewContoller
+
+```Swift
+import UIKit
+
+class QuizViewController: UIViewController {
+  
+  let quiz = QuizManager.shared.getQuiz()
+  
+  @IBOutlet weak var questionLabel: UILabel!
+  @IBOutlet weak var coiceButton1: UIButton!
+  @IBOutlet weak var coiceButton2: UIButton!
+  @IBOutlet weak var coiceButton3: UIButton!
+  @IBOutlet weak var coiceButton4: UIButton!
+  @IBOutlet weak var incollectLabel: UILabel!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    incollectLabel.isHidden = true
+    navigationItem.hidesBackButton = true
+    
+    questionLabel.text = quiz["quiz"]
+    coiceButton1.setTitle(quiz["choice_1"], for: .normal)
+    coiceButton2.setTitle(quiz["choice_2"], for: .normal)
+    coiceButton3.setTitle(quiz["choice_3"], for: .normal)
+    coiceButton4.setTitle(quiz["choice_4"], for: .normal)
+  }
+  
+  @IBAction func tappedAnswer(_ sender: UIButton) {
+    
+    if quiz["answer"] != sender.titleLabel?.text {
+      incollectLabel.isHidden = false
+      return
+    }
+    
+    let isExisting = QuizManager.shared.existNextQuiz()
+    let next = isExisting ?
+      storyboard!.instantiateViewController(withIdentifier: "QuizViewController") :
+      storyboard!.instantiateViewController(withIdentifier: "ResultViewController")
+    navigationController?.pushViewController(next, animated: true)
+  }
+}
+```
+
+* ResultViewController
+
+```Swift
+class ResultViewController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    navigationItem.hidesBackButton = true
+  }
+  
+  @IBAction func tappedGoBack(_ sender: Any) {
+    navigationController?.popToRootViewController(animated: true)
+  }
+}
+
+```
+
+* QuizViewContoller
+
+```Swift
+import UIKit
+
+class QuizManager: NSObject {
+  
+  static var shared = QuizManager()
+  private override init() {} // Singleton
+  private var quizes = [[String: String]]()
+  
+  private func setupQuizzes() {
+    quizes = [
+      [
+        "quiz": "1. What colour ball should normally be struck by the cue in snooker?",
+        "answer": "white",
+        "choice_1": "white",
+        "choice_2": "mauve",
+        "choice_3": "black",
+        "choice_4": "orange"
+      ],
+      [
+        "quiz": "2. Which word means a signed document in support of a particular action?",
+        "answer": "partition",
+        "choice_1": "petition",
+        "choice_2": "position",
+        "choice_3": "partition",
+        "choice_4": "perforation"
+      ],
+      [
+        "quiz": "3. Somebody described as 'butterfingers' would have a propensity for what?",
+        "answer": "being clumsy",
+        "choice_1": "being clumsy",
+        "choice_2": "playing the piano",
+        "choice_3": "gardening",
+        "choice_4": "cookery"
+      ],
+    ]
+  }
+  
+  func existNextQuiz() -> Bool {
+    return quizes.count != 0
+  }
+  
+  func getQuiz() -> [String: String] {
+    if quizes.count == 0 { setupQuizzes() }
+    let quiz = quizes.first
+    quizes.removeFirst()
+    return quiz!
+  }
+}
 ```
