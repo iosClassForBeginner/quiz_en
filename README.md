@@ -1,3 +1,9 @@
+# Let's make app in an hour
+
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/sample.gif" width="50%" height="50%"/></div>  
+
+* Xcode 9 / Swift 4 (Development Environment)
+
 # Full procedure
 
 ## 1, Create Project
@@ -157,7 +163,7 @@ class ResultViewController: UIViewController {
 
 ```
 
-* QuizViewContoller
+* QuizManager
 
 ```Swift
 import UIKit
