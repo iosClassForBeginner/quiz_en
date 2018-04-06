@@ -44,11 +44,11 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * We need to 2 more screens which are showing `Quiz` and `Result`.
   * Select `UIViewController` component from utility area.
   * Drag & drop to the board
-<details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
+  * <details><summary>How to add view controller</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/uiviewcontroller-add.gif" /></div></details>
 
 * 3-7. Design quiz & result Screens  
   * Youe storyboard may looks like this? Great!
-<div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
+  * <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/ui-complete.png" width="50%" height="50%"/></div>  
 
 ## 4, Connect class to storyboard
  
@@ -68,7 +68,7 @@ You complete project setup. Good job! Now we can work on front side. Please sele
   * We need to connect UI components to the class. i.e. Button action should be triguered after tapped
   * To connect components to class, let's create segue.
   * `control + drag in storyboard` to create a control segue
-> <details><summary>How to create segue</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-button-action.gif" /></div></details>
+  * <details><summary>How to create segue</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/quiz_en/blob/master/demos/tutorial/class-connect-button-action.gif" /></div></details>
 
 ## 5, Add logic
 
