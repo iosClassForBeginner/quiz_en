@@ -10,7 +10,7 @@ import UIKit
 
 class QuizManager: NSObject {
   
-  static var shared = QuizManager()
+  static let shared = QuizManager()
   private override init() {} // Singleton
 
   private var quizes = [[String: String]]()
